@@ -5,3 +5,5 @@ scipy==1.10.1
 seaborn==0.12.2
 scikit-learn==1.2.2
 pyxdf==1.16.4
+mne-icalabel==0.6.0
+torch==2.0.1
