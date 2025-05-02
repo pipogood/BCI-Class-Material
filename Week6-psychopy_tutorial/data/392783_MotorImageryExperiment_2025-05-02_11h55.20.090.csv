@@ -1,0 +1,4 @@
+﻿arrow_direct,arrow_orientation,stim_images,thisN,thisTrialN,thisRepN,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,thisRow.t,notes,walcome_screen.started,textwelcomescreen.started,walcome_screen.stopped,comfirm.started,text.started,keySpacebar.started,comfirm.stopped,keySpacebar.keys,keySpacebar.rt,keySpacebar.duration,trial.started,cross_on_screen.started,participant,session,date,expName,psychopyVersion,frameRate,expStart,
+,,,,,,,,,,,,0.020586400000183858,0.037204500000143526,2.0066280000000916,,,,,,,,,,392783,001,2025-05-02_11h55.20.090,MotorImageryExperiment,2024.2.4,142.5699662106156,2025-05-02 11h55.28.314182 +0700,
+,,,,,,,,,,,,,,,2.0066582000001745,2.0114887000002,2.0114887000002,2.8711898000001383,space,0.8107969999998659,None,,,392783,001,2025-05-02_11h55.20.090,MotorImageryExperiment,2024.2.4,142.5699662106156,2025-05-02 11h55.28.314182 +0700,
+D,180,images/idle.jpg,0,0,0,0,0,0,3,,,,,,,,,,,,,2.9585071000001335,,,,,,,,,

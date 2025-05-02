@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on มีนาคม 07, 2025, at 15:28
+    on พฤษภาคม 02, 2025, at 12:10
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -395,20 +395,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=[1.0000, -1.0000, -1.0000],
         opacity=None, depth=-1.0, interpolate=True)
-    action = visual.ShapeStim(
-        win=win, name='action',
-        size=(0.1, 0.1), vertices='circle',
-        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
-        lineWidth=1.0,
-        colorSpace='rgb', lineColor='white', fillColor=[0.1294, 0.8667, 0.1294],
-        opacity=None, depth=-2.0, interpolate=True)
     rest_cue = visual.TextStim(win=win, name='rest_cue',
         text='REST',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.1, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-3.0);
+        depth=-2.0);
+    stim_image = visual.ImageStim(
+        win=win,
+        name='stim_image', 
+        image='default.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
     
     # --- Initialize components for Routine "goodbye_screen" ---
     text_2 = visual.TextStim(win=win, name='text_2',
@@ -744,12 +745,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine trial
         trial = data.Routine(
             name='trial',
-            components=[cross_on_screen, arrow, action, rest_cue],
+            components=[cross_on_screen, arrow, rest_cue, stim_image],
         )
         trial.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
         arrow.setOri(arrow_orientation)
+        stim_image.setImage(stim_images)
         # Run 'Begin Routine' code from code
         condition_triggered = False  # Track if condition has been executed
         # store start times for trial
@@ -853,40 +855,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     arrow.status = FINISHED
                     arrow.setAutoDraw(False)
             
-            # *action* updates
-            
-            # if action is starting this frame...
-            if action.status == NOT_STARTED and tThisFlip >= 2.5-frameTolerance:
-                # keep track of start time/frame for later
-                action.frameNStart = frameN  # exact frame index
-                action.tStart = t  # local t and not account for scr refresh
-                action.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(action, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'action.started')
-                # update status
-                action.status = STARTED
-                action.setAutoDraw(True)
-            
-            # if action is active this frame...
-            if action.status == STARTED:
-                # update params
-                pass
-            
-            # if action is stopping this frame...
-            if action.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > action.tStartRefresh + 4.0-frameTolerance:
-                    # keep track of stop time/frame for later
-                    action.tStop = t  # not accounting for scr refresh
-                    action.tStopRefresh = tThisFlipGlobal  # on global time
-                    action.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'action.stopped')
-                    # update status
-                    action.status = FINISHED
-                    action.setAutoDraw(False)
-            
             # *rest_cue* updates
             
             # if rest_cue is starting this frame...
@@ -920,6 +888,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # update status
                     rest_cue.status = FINISHED
                     rest_cue.setAutoDraw(False)
+            
+            # *stim_image* updates
+            
+            # if stim_image is starting this frame...
+            if stim_image.status == NOT_STARTED and tThisFlip >= 2.5-frameTolerance:
+                # keep track of start time/frame for later
+                stim_image.frameNStart = frameN  # exact frame index
+                stim_image.tStart = t  # local t and not account for scr refresh
+                stim_image.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(stim_image, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'stim_image.started')
+                # update status
+                stim_image.status = STARTED
+                stim_image.setAutoDraw(True)
+            
+            # if stim_image is active this frame...
+            if stim_image.status == STARTED:
+                # update params
+                pass
+            
+            # if stim_image is stopping this frame...
+            if stim_image.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > stim_image.tStartRefresh + 4-frameTolerance:
+                    # keep track of stop time/frame for later
+                    stim_image.tStop = t  # not accounting for scr refresh
+                    stim_image.tStopRefresh = tThisFlipGlobal  # on global time
+                    stim_image.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'stim_image.stopped')
+                    # update status
+                    stim_image.status = FINISHED
+                    stim_image.setAutoDraw(False)
             # Run 'Each Frame' code from code
             if arrow.status == STARTED and not condition_triggered:
                 outlet.push_sample([arrow_direct])
