@@ -124,6 +124,18 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
+      <EmotivRecordingComponent name="cortex_rec" plugin="psychopy-emotiv">
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="cortex_rec" valType="code" updates="None" name="name"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
+      </EmotivRecordingComponent>
     </Routine>
     <Routine name="trial">
       <RoutineSettingsComponent name="trial" plugin="None">
@@ -329,6 +341,21 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code" valType="code" updates="None" name="name"/>
       </CodeComponent>
+      <EmotivMarkingComponent name="eeg_marker" plugin="psychopy-emotiv">
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="0.01" valType="code" updates="None" name="durationEstim"/>
+        <Param val="$arrow_direct" valType="str" updates="set every repeat" name="emotiv_marker_label"/>
+        <Param val="1" valType="str" updates="set every repeat" name="emotiv_marker_value"/>
+        <Param val="False" valType="bool" updates="constant" name="emotiv_stop_marker"/>
+        <Param val="eeg_marker" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="2.5" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
+      </EmotivMarkingComponent>
     </Routine>
     <Routine name="goodbye_screen">
       <RoutineSettingsComponent name="goodbye_screen" plugin="None">
