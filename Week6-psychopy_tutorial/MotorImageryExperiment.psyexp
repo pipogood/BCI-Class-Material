@@ -125,7 +125,7 @@
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <EmotivRecordingComponent name="cortex_rec" plugin="psychopy-emotiv">
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="cortex_rec" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
@@ -342,7 +342,7 @@
         <Param val="code" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <EmotivMarkingComponent name="eeg_marker" plugin="psychopy-emotiv">
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="0.01" valType="code" updates="None" name="durationEstim"/>
         <Param val="$arrow_direct" valType="str" updates="set every repeat" name="emotiv_marker_label"/>
         <Param val="1" valType="str" updates="set every repeat" name="emotiv_marker_value"/>
